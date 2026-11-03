@@ -1,0 +1,208 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>AI Jiu-Jitsu Book</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<meta name="description" content="AI Jiu-Jitsu: Run Circles Around the Big Guys. The practical AI playbook for small business owners, by Gregg Reed.">
+<meta property="og:title" content="AI Jiu-Jitsu: Run Circles Around the Big Guys">
+<meta property="og:description" content="Small is your strength. AI makes you unstoppable. The practical AI playbook for small business owners.">
+<meta property="og:image" content="https://AJJbook.com/img/cover_front.png">
+<style>
+/* Layout: navy hero band with cover, then StoryBrand sections in a 720px column */
+:root{
+  --navy:#0D1F47; --gold:#C8960C; --ink:#1a1a1a; --muted:#555; --paper:#ffffff;
+  --soft:#f7f7f9; --line:#e3e3e8; --warm:#fffdf5; --onnavy:#ffffff;
+  --serif:Georgia,"Times New Roman",serif; --sans:Arial,Helvetica,sans-serif;
+  color-scheme:light;
+}
+html,body{background:var(--paper);}
+body{margin:0;color:var(--ink);font-family:var(--serif);line-height:1.55;font-size:17px;}
+img{max-width:100%;height:auto;}
+a{color:var(--navy);}
+a:focus-visible,.btn:focus-visible{outline:3px solid var(--gold);outline-offset:3px;}
+
+.nav{background:var(--navy);font-family:var(--sans);}
+.nav .in{display:flex;flex-wrap:wrap;gap:.4em 1.2em;align-items:center;max-width:960px;margin:0 auto;
+  padding-block:.7em;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));}
+.nav a{color:var(--onnavy);text-decoration:none;font-size:.95em;}
+.nav a:hover{text-decoration:underline;}
+.nav .brand{font-weight:bold;margin-right:auto;}
+
+.wrap{max-width:720px;margin:0 auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));}
+
+.hero{background:var(--navy);color:var(--onnavy);border-top:1px solid rgba(255,255,255,.12);}
+.hero .in{max-width:960px;margin:0 auto;display:flex;gap:40px;align-items:center;flex-wrap:wrap;
+  padding-block:44px 52px;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));}
+.hero .cover{flex:0 0 auto;width:250px;max-width:70%;margin:0 auto;}
+.hero .cover{position:relative;padding:18px 10px 26px 26px;}
+.hero .cover::before{content:"";position:absolute;inset:-10% -14%;background:radial-gradient(closest-side,rgba(200,150,12,.28),rgba(200,150,12,0));z-index:0;pointer-events:none;}
+.hero .cover a{display:block;position:relative;z-index:1;perspective:1400px;}
+.book3d{display:block;position:relative;transform:rotateY(22deg);transform-style:preserve-3d;transition:transform .5s ease;}
+.hero .cover a:hover .book3d{transform:rotateY(12deg);}
+.book3d img{display:block;position:relative;border-radius:2px 5px 5px 2px;
+  box-shadow:14px 22px 34px rgba(0,0,0,.55),3px 4px 10px rgba(0,0,0,.35);}
+.book3d::before{content:"";position:absolute;left:0;top:0;bottom:0;width:7%;z-index:2;border-radius:2px 0 0 2px;pointer-events:none;
+  background:linear-gradient(to right,rgba(255,255,255,.22),rgba(0,0,0,.38) 45%,rgba(255,255,255,.12) 75%,rgba(255,255,255,0));}
+.book3d::after{content:"";position:absolute;top:0;bottom:0;left:0;width:9.8%;transform-origin:left center;transform:rotateY(-90deg) translateX(-100%);
+  background:#0D1F47 url("img/spine.png") center/100% 100% no-repeat;border-radius:2px 0 0 2px;
+  box-shadow:inset -6px 0 10px rgba(0,0,0,.35);}
+@media (prefers-reduced-motion:reduce){.book3d{transition:none;}}
+.hero .copy{flex:1 1 360px;min-width:0;}
+.eyebrow{font-family:var(--sans);text-transform:uppercase;letter-spacing:.12em;font-size:.78em;color:var(--gold);margin:0 0 .6em;font-weight:bold;}
+.hero h1{font-size:2.6em;line-height:1.12;margin:0 0 .35em;text-wrap:balance;color:var(--onnavy);}
+.hero h1 em{color:var(--gold);font-style:italic;}
+.hero .lede{font-size:1.15em;margin:0 0 1.3em;color:#dfe4ee;}
+.btn{display:inline-block;background:var(--gold);color:#fff;padding:.7em 1.3em;border-radius:6px;text-decoration:none;font-weight:bold;font-family:var(--sans);font-size:1.02em;}
+.btn:hover{filter:brightness(1.08);}
+.btn.navy{background:var(--navy);}
+.fine{font-family:var(--sans);font-size:.85em;margin:.8em 0 0;color:#b9c2d6;}
+
+section{padding-block:38px;}
+section + section{border-top:1px solid var(--line);}
+h2{color:var(--navy);font-size:1.6em;line-height:1.2;margin:0 0 .5em;text-wrap:balance;}
+.label{font-family:var(--sans);text-transform:uppercase;letter-spacing:.12em;font-size:.75em;color:var(--gold);font-weight:bold;margin:0 0 .4em;}
+.big{font-size:1.2em;color:var(--navy);font-weight:bold;}
+
+.guide{display:flex;gap:22px;align-items:flex-start;flex-wrap:wrap;margin-top:1.2em;}
+.guide figure{margin:0;width:180px;flex:0 0 auto;}
+.guide figure img{display:block;width:100%;border-radius:6px;}
+.guide .txt{flex:1 1 280px;min-width:0;}
+.cap{font-size:.85em;color:var(--muted);font-style:italic;margin:.4em 0 0;text-align:center;line-height:1.35;}
+
+.steps{list-style:none;padding:0;margin:1em 0 0;display:grid;gap:14px;counter-reset:s;}
+.steps li{counter-increment:s;display:grid;grid-template-columns:48px 1fr;gap:14px;align-items:start;
+  border:1px solid var(--line);border-left:5px solid var(--gold);border-radius:8px;padding:.9em 1em;background:#fcfcfd;}
+.steps li::before{content:counter(s);width:40px;height:40px;border-radius:50%;background:var(--navy);color:#fff;
+  font-family:var(--sans);font-weight:bold;font-size:1.2em;display:grid;place-items:center;}
+.steps strong{color:var(--navy);display:block;font-size:1.1em;}
+.steps p{margin:.2em 0 0;}
+
+.checks{list-style:none;padding:0;margin:.6em 0 0;display:grid;gap:.55em;}
+.checks li{position:relative;padding-left:1.8em;}
+.checks li::before{content:"";position:absolute;left:.2em;top:.3em;width:.45em;height:.85em;border:solid var(--gold);border-width:0 .2em .2em 0;transform:rotate(45deg);}
+
+.trio{font-style:italic;color:var(--navy);font-size:1.25em;line-height:1.5;margin:1em 0 0;}
+
+.cta{background:var(--warm);border:2px solid var(--gold);border-radius:10px;padding:1.6em 1.2em;text-align:center;margin-block:10px 0;}
+.cta h2{margin-bottom:.3em;}
+.cta p{margin:.3em 0 1.1em;}
+
+.publisher{background:var(--navy);color:var(--onnavy);margin-top:44px;}
+.publisher .in{max-width:720px;margin:0 auto;display:flex;gap:28px;align-items:center;flex-wrap:wrap;
+  padding-block:30px;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));}
+.publisher img{display:block;width:230px;flex:0 0 auto;}
+.publisher .txt{flex:1 1 280px;min-width:0;}
+.publisher p{margin:0;color:#dfe4ee;}
+.publisher strong{color:var(--onnavy);}
+
+.foot{max-width:720px;margin:0 auto;padding-block:16px 34px;font-size:.85em;color:#888;border-top:1px solid #eee;font-family:var(--sans);
+  padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));}
+.foot a{color:#888;}
+
+@media (max-width:600px){
+  .hero h1{font-size:2em;}
+  .hero .in{padding-block:30px 38px;gap:26px;}
+  .guide figure{width:140px;}
+}
+</style>
+</head>
+<body>
+
+<div class="nav"><div class="in">
+  <a class="brand" href="#top">AI Jiu-Jitsu</a>
+  <a href="#plan">How It Works</a>
+  <a href="#author">The Author</a>
+  <a href="https://www.amazon.com/s?k=AI+Jiu-Jitsu+Gregg+Reed" rel="noopener">Buy on Amazon</a>
+</div></div>
+
+<header class="hero" id="top"><div class="in">
+  <div class="cover"><a href="https://www.amazon.com/s?k=AI+Jiu-Jitsu+Gregg+Reed" rel="noopener"><span class="book3d"><img src="img/cover_front.png" width="500" height="750" alt="AI Jiu-Jitsu: Run Circles Around the Big Guys, by Gregg Reed. Front cover."></span></a></div>
+  <div class="copy">
+    <p class="eyebrow">For small business owners</p>
+    <h1>Small Is Your Strength. <em>AI Makes You Unstoppable.</em></h1>
+    <p class="lede"><strong>AI Jiu-Jitsu</strong> shows you how to use AI to amplify what makes your business special: your relationships, your speed, your personal touch. You don’t have to stop being you. AI just makes more of you.</p>
+    <a class="btn" href="https://www.amazon.com/s?k=AI+Jiu-Jitsu+Gregg+Reed" rel="noopener">Get the Book on Amazon &rarr;</a>
+    <p class="fine">Paperback and Kindle. Includes free downloadable tools for every chapter.</p>
+  </div>
+</div></header>
+
+<main class="wrap">
+
+<section id="problem">
+  <p class="label">Sound familiar?</p>
+  <h2>You started a business to build something special.</h2>
+  <p>But somehow you ended up answering emails until midnight. Proposals. Social media. Follow-ups. Marketing. The busywork eats your days, then your nights.</p>
+  <p>It’s been tough. You don’t have a big budget, a full staff, or an IT department. Some days it feels like you can’t keep up.</p>
+  <p class="big">Until now. And you don’t have to stop being you to do it.</p>
+</section>
+
+<section id="answer">
+  <p class="label">The good news</p>
+  <h2>You’re not small. You’re dangerous!</h2>
+  <p>Big companies have one major weakness: <strong>they can’t be you.</strong> They can’t copy your relationships, your story, your reputation, or your attention to detail.</p>
+  <p>AI takes over your busywork. That frees you to do what the big guys can’t. Speed, authenticity, and connection become your advantage. Their size starts working against them.</p>
+  <p class="trio">This is AI Jiu-Jitsu. It’s your move.</p>
+  <p style="margin:1em 0 0;"><a class="btn" href="https://www.amazon.com/s?k=AI+Jiu-Jitsu+Gregg+Reed" rel="noopener">Get AI Jiu-Jitsu on Amazon &rarr;</a></p>
+</section>
+
+<section id="author">
+  <p class="label">Your guide</p>
+  <h2>I know that feeling.</h2>
+  <div class="guide">
+    <div class="txt">
+      <p>I was working sixteen hours a day. Then I put AI to work in my own businesses, and it changed the game.</p>
+      <p>AI isn’t new to me. I worked on early AI while in graduate school. Then I switched to business, spending decades starting, building, and running small businesses. Now I coach small business owners through BreakThru Growth.</p>
+      <p>The book’s title comes from the mat. As a martial artist, I’ve seen what Brazilian Jiu-Jitsu can do. It gives fighters a way to beat bigger, stronger opponents. It works through leverage and technique. With BJJ, size doesn’t decide the match. AJJ can do the same for your business.</p>
+      <p style="margin-bottom:0;"><strong>Gregg Reed</strong></p>
+    </div>
+  </div>
+</section>
+
+<section id="plan">
+  <p class="label">The plan</p>
+  <h2>Three steps. Start today.</h2>
+  <ol class="steps">
+    <li><div><strong>Get the Book</strong><p>23 short, practical chapters. Plain English. Written for busy owners, not tech experts.</p></div></li>
+    <li><div><strong>Get the Tools</strong><p>The book unlocks a free set of ready-to-use AI prompts, templates, and downloads for every chapter. Copy, paste, and go.</p></div></li>
+    <li><div><strong>Run Circles Around the Big Guys</strong><p>Win more customers with less effort. Grow without losing what makes you special.</p></div></li>
+  </ol>
+</section>
+
+<section id="learn">
+  <p class="label">Inside the book</p>
+  <h2>What you’ll learn</h2>
+  <ul class="checks">
+    <li>Reach more customers without losing your personal touch.</li>
+    <li>Create better marketing content in your own voice.</li>
+    <li>Reclaim 10 hours a week while AI handles the busywork.</li>
+    <li>Answer customers 24/7 and get found online.</li>
+    <li>Write proposals that close, and follow up without the stress.</li>
+    <li>Use AI safely, and skip the mistakes everyone makes.</li>
+    <li>Follow a simple 90-day game plan to put it all to work.</li>
+  </ul>
+</section>
+
+<section id="buy">
+  <div class="cta">
+    <h2>Ready to press your advantage?</h2>
+    <p>The busywork won’t stop on its own. The big guys won’t slow down. Your edge is waiting.</p>
+    <a class="btn navy" href="https://www.amazon.com/s?k=AI+Jiu-Jitsu+Gregg+Reed" rel="noopener">Get AI Jiu-Jitsu on Amazon &rarr;</a>
+    <p class="trio" style="font-size:1.1em;margin:1em 0 0;">It’s your move.</p>
+  </div>
+</section>
+
+</main>
+
+<aside class="publisher" aria-label="About the publisher"><div class="in">
+  <img src="img/beeswax-logo.png" width="800" height="349" alt="Beeswax Books logo">
+  <div class="txt">
+    <p><strong>Beeswax Books</strong> publishes business books for small business owners. Practical. Plain English. Built to help you lead, compete, and win.</p>
+  </div>
+</div></aside>
+
+<div class="foot">&copy; 2026 Beeswax Books &nbsp;&middot;&nbsp; <a href="https://BreakThruGrowth.com">BreakThru Growth</a></div>
+
+</body>
+</html>
