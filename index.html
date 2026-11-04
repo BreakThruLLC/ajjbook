@@ -114,12 +114,10 @@ h2{color:var(--navy);font-size:1.6em;line-height:1.2;margin:0 0 .5em;text-wrap:b
 .label{font-family:var(--sans);text-transform:uppercase;letter-spacing:.12em;font-size:.75em;color:var(--gold);font-weight:bold;margin:0 0 .4em;}
 .big{font-size:1.2em;color:var(--navy);font-weight:bold;}
 
-.guidehead{display:flex;gap:20px;align-items:flex-end;justify-content:space-between;}
-.guidehead .ghtext{flex:1 1 auto;min-width:0;}
-.guidehead h2{margin-bottom:0;}
-.guidehead figure{margin:0;width:170px;flex:0 0 auto;}
-.guidehead figure img{display:block;width:100%;border-radius:6px;}
-.guide{margin-top:1.2em;}
+.guide{display:flow-root;}
+.guide .portrait{float:right;width:200px;margin:.15em 0 .8em 24px;}
+.guide .portrait img{display:block;width:100%;border-radius:6px;}
+.guide h2{margin-top:0;}
 .cap{font-size:.85em;color:var(--muted);font-style:italic;margin:.4em 0 0;text-align:center;line-height:1.35;}
 
 .steps{list-style:none;padding:0;margin:1em 0 0;display:grid;gap:14px;counter-reset:s;}
@@ -158,7 +156,7 @@ h2{color:var(--navy);font-size:1.6em;line-height:1.2;margin:0 0 .5em;text-wrap:b
 @media (max-width:600px){
   .hero h1{font-size:2em;}
   .hero .in{padding-block:30px 38px;gap:26px;}
-  .guidehead figure{width:120px;}
+  .guide .portrait{width:130px;margin-left:16px;}
 }
 </style>
 </head>
@@ -204,14 +202,10 @@ h2{color:var(--navy);font-size:1.6em;line-height:1.2;margin:0 0 .5em;text-wrap:b
 </section>
 
 <section id="author">
-  <div class="guidehead">
-    <div class="ghtext">
-      <p class="label">Your guide</p>
-      <h2>I know that feeling.</h2>
-    </div>
-    <figure><img src="img/gregg-reed.jpg" width="640" height="640" alt="Gregg Reed, author of AI Jiu-Jitsu"></figure>
-  </div>
+  <p class="label">Your guide</p>
   <div class="guide">
+    <figure class="portrait"><img src="img/gregg-reed.jpg" width="640" height="640" alt="Gregg Reed, author of AI Jiu-Jitsu"></figure>
+    <h2>I know that feeling.</h2>
     <div class="txt">
       <p>I was working sixteen hours a day. Then I put AI to work in my own businesses, and it changed the game.</p>
       <p>I worked on early AI algorithms while in graduate school. AI wasn’t practical yet, so I switched to business. I spent decades starting, building, and running small businesses. I learned what works and what doesn’t. I saw many owners put in long hours with nothing to show for it. Now I coach small business owners through BreakThru Growth.</p>
