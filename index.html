@@ -89,6 +89,10 @@ a:focus-visible,.btn:focus-visible{outline:3px solid var(--gold);outline-offset:
 .hero .cover a{display:block;position:relative;z-index:1;perspective:1400px;}
 .book3d{display:block;position:relative;transform:rotateY(22deg);transform-style:preserve-3d;transition:transform .5s ease;}
 .hero .cover a:hover .book3d{transform:rotateY(12deg);}
+.minibook a{display:block;perspective:1400px;}
+.minibook a:hover .book3d{transform:rotateY(12deg);}
+.split.left.bookrow{grid-template-columns:200px minmax(0,1fr);align-items:center;}
+.minibook{width:160px;margin:4px 0 10px 14px;}
 .book3d img{display:block;position:relative;border-radius:2px 5px 5px 2px;
   box-shadow:14px 22px 34px rgba(0,0,0,.55),3px 4px 10px rgba(0,0,0,.35);}
 .book3d::before{content:"";position:absolute;left:0;top:0;bottom:0;width:7%;z-index:2;border-radius:2px 0 0 2px;pointer-events:none;
@@ -122,6 +126,8 @@ section{display:flow-root;}
   .split.right .photo{order:-1;}
   .photo{margin:0;}
   .photo img{aspect-ratio:4/3;object-fit:cover;object-position:50% 40%;}
+  .split.left.bookrow{grid-template-columns:minmax(0,1fr);}
+  .minibook{width:140px;margin:0 auto 6px;}
 }
 section > :last-child,section .txt > :last-child,section .guide > :last-child{margin-bottom:0;}
 section + section{border-top:1px solid var(--line);}
@@ -260,15 +266,20 @@ h2{color:var(--navy);font-size:1.6em;line-height:1.2;margin:0 0 .5em;text-wrap:b
 <section id="learn">
   <p class="label">Inside the book</p>
   <h2>What you’ll learn</h2>
-  <ul class="checks">
-    <li>Reach more customers without losing your personal touch.</li>
-    <li>Create better marketing content in your own voice.</li>
-    <li>Reclaim 10 hours a week while AI handles the busywork.</li>
-    <li>Answer customers 24/7 and get found online.</li>
-    <li>Write proposals that close, and follow up without the stress.</li>
-    <li>Use AI safely, and skip the mistakes everyone makes.</li>
-    <li>Follow a simple 90-day game plan to put it all to work.</li>
-  </ul>
+  <div class="split left bookrow">
+    <div class="minibook"><a href="https://link.amazon/B06EBG1gq" target="_blank" rel="sponsored noopener"><span class="book3d"><img src="img/cover_front.png" width="500" height="750" loading="lazy" alt="AI Jiu-Jitsu: Run Circles Around the Big Guys, by Gregg Reed. Buy the book on Amazon."></span></a></div>
+    <div class="copy">
+    <ul class="checks">
+      <li>Reach more customers without losing your personal touch.</li>
+      <li>Create better marketing content in your own voice.</li>
+      <li>Reclaim 10 hours a week while AI handles the busywork.</li>
+      <li>Answer customers 24/7 and get found online.</li>
+      <li>Write proposals that close, and follow up without the stress.</li>
+      <li>Use AI safely, and skip the mistakes everyone makes.</li>
+      <li>Follow a simple 90-day game plan to put it all to work.</li>
+    </ul>
+    </div>
+  </div>
 </section>
 
 <section id="buy">
