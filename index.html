@@ -89,13 +89,11 @@ a:focus-visible,.btn:focus-visible{outline:3px solid var(--gold);outline-offset:
 .hero .cover a{display:block;position:relative;z-index:1;perspective:1400px;}
 .book3d{display:block;position:relative;transform:rotateY(22deg);transform-style:preserve-3d;transition:transform .5s ease;}
 .hero .cover a:hover .book3d{transform:rotateY(12deg);}
-.minibook a{display:block;perspective:1400px;}
-.book3d.flip{transform:rotateY(-22deg);}
-.minibook a:hover .book3d.flip{transform:rotateY(-12deg);}
-.book3d.flip::after{left:auto;right:0;width:14%;top:.9%;bottom:.9%;transform-origin:right center;transform:rotateY(-90deg) translateX(100%);background:linear-gradient(to right,#0D1F47 0 11%,transparent 11% 89%,#0D1F47 89%),repeating-linear-gradient(to right,#f3ead6 0 2px,#cdbf9f 2px 3px);border-radius:0 3px 3px 0;}
-.book3d.flip img{box-shadow:-14px 22px 34px rgba(0,0,0,.45),-3px 4px 10px rgba(0,0,0,.3);}
+.minibook a{display:block;}
+.minibook img{display:block;width:100%;height:auto;transition:transform .3s ease;}
+.minibook a:hover img{transform:translateY(-4px);}
 .split.right.bookrow{grid-template-columns:minmax(0,1fr) 200px;align-items:center;}
-.minibook{width:160px;margin:4px 14px 10px 26px;}
+.minibook{width:190px;margin:0 0 0 10px;}
 .book3d img{display:block;position:relative;border-radius:2px 5px 5px 2px;
   box-shadow:14px 22px 34px rgba(0,0,0,.55),3px 4px 10px rgba(0,0,0,.35);}
 .book3d::before{content:"";position:absolute;left:0;top:0;bottom:0;width:7%;z-index:2;border-radius:2px 0 0 2px;pointer-events:none;
@@ -131,7 +129,7 @@ section{display:flow-root;}
   .photo img{aspect-ratio:4/3;object-fit:cover;object-position:50% 40%;}
   .split.right.bookrow{grid-template-columns:minmax(0,1fr);}
   .split.right.bookrow .minibook{order:-1;}
-  .minibook{width:140px;margin:0 auto 6px;}
+  .minibook{width:160px;margin:0 auto;}
 }
 section > :last-child,section .txt > :last-child,section .guide > :last-child{margin-bottom:0;}
 section + section{border-top:1px solid var(--line);}
@@ -282,7 +280,7 @@ h2{color:var(--navy);font-size:1.6em;line-height:1.2;margin:0 0 .5em;text-wrap:b
       <li>Follow a simple 90-day game plan to put it all to work.</li>
     </ul>
     </div>
-    <div class="minibook"><a href="https://link.amazon/B06EBG1gq" target="_blank" rel="sponsored noopener"><span class="book3d flip"><img src="img/cover_front.png" width="500" height="750" loading="lazy" alt="AI Jiu-Jitsu: Run Circles Around the Big Guys, by Gregg Reed. Buy the book on Amazon."></span></a></div>
+    <div class="minibook"><a href="https://link.amazon/B06EBG1gq" target="_blank" rel="sponsored noopener"><img src="img/book-3d-pages.png" width="876" height="1180" loading="lazy" alt="AI Jiu-Jitsu: Run Circles Around the Big Guys, by Gregg Reed. Buy the book on Amazon."></a></div>
   </div>
 </section>
 
